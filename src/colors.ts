@@ -7,7 +7,7 @@ function addColor(text: string, color: Colors, isBackground = false) {
     }
     return text + fontColors[color];
 }
-function getEffects(effectList: Effects) {
+function getEffects(effectList: Effects[]) {
     return effectList.map(effect => effects[effect]).join('');
 }
 export function color(text: string, options: ColorOptions) {

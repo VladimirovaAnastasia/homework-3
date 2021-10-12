@@ -41,7 +41,7 @@ export const contrast: StringKeyValue = {
     white: 'black',
 };
 
-export type Effects = Array<keyof typeof effects>;
+export type Effects = keyof typeof effects;
 export type FontColors = keyof typeof fontColors;
 export type BackgroundColors = keyof typeof backgroundColors;
 export type Colors = BackgroundColors & FontColors;
@@ -49,7 +49,7 @@ export type Colors = BackgroundColors & FontColors;
 export type ColorOptions = {
     font?: FontColors;
     background?: BackgroundColors;
-    effects?: Effects;
+    effects?: Effects[];
 }
 export type MarkdownOptions = {
     bold?: boolean;
