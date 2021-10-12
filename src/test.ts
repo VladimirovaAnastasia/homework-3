@@ -1,5 +1,5 @@
 import { style } from './style';
-import {contrast, FontColors, fontColors} from './model';
+import {BackgroundColors, contrast, FontColors, fontColors} from './model';
 console.log('colors:');
 console.log(style('red text', { font: 'red' }));
 console.log(style('green text', { font: 'green' }));
@@ -12,7 +12,7 @@ console.log(
     Array.from('Message of all colors')
         .map((char, i) => {
             const font = colorList[i % colorList.length];
-            return style(char, { font, background: <FontColors>contrast[font] });
+            return style(char, { font, background: <BackgroundColors>contrast[font] });
         })
         .join(''),
 );
