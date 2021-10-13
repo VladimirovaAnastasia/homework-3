@@ -41,9 +41,27 @@ export const contrast: StringKeyValue = {
     white: 'black',
 };
 
-export type Effects = keyof typeof effects;
-export type FontColors = keyof typeof fontColors;
-export type BackgroundColors = keyof typeof backgroundColors;
+enum EEffect {
+    bright = 'bright',
+    dim = 'dim',
+    italic = 'italic',
+    underscore = 'underscore',
+    blink = 'blink',
+}
+enum EColor {
+    black = 'black',
+    red = 'red',
+    green = 'green',
+    yellow = 'yellow',
+    blue = 'blue',
+    magenta = 'magenta',
+    cyan = 'cyan',
+    white = 'white',
+}
+
+export type Effects = keyof typeof EEffect;
+export type FontColors = keyof typeof EColor;
+export type BackgroundColors = keyof typeof EColor;
 export type Colors = BackgroundColors & FontColors;
 
 export type ColorOptions = {
